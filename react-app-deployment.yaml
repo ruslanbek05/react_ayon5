@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
       - name: react-app
-        image: ghcr.io/<your-gh-username>/react-ayon5:latest
+        image: ghcr.io/ruslanbek05/react_ayon5:latest
         ports:
         - containerPort: 3000
+      imagePullSecrets:
+        - name: ghcr-secret
 ---
 apiVersion: v1
 kind: Service
